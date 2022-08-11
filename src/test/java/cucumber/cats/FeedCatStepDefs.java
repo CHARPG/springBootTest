@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FeedCatStepDefs {
 
     boolean isHungry;
-    @Given("the cat is hungry")
+    @Given("The cat is hungry")
     public void cat_is_hungry()
     {
         isHungry = true;

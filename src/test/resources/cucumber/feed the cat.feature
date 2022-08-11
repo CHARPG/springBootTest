@@ -5,6 +5,6 @@ Feature: feed the cat
   SO THAT my cat isn't hungry
 
   Scenario: Successfully feed the cat
-    Given the cat is hungry
+    Given The cat is hungry
     When I try to feed the cat
     Then the cat should no longer be hungry

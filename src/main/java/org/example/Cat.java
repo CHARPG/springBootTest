@@ -1,12 +1,10 @@
 package org.example;
 
 public class Cat extends Mammal{
-    public Cat(String name, int age, int health)
-    {
-        setName(name);
-        setAge(age);
-        setHealth(health);
+    public Cat(String animal, String name, int age, int health) {
+        super(animal, name, age, health);
     }
+
     public String eat()
     {
         return(getName() + " eats");

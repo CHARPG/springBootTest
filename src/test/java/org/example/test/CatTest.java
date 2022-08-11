@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     {
         ArrayList<Cat> catArray = new ArrayList<>();
 
-        catArray.add(new Cat("cat", 0, 0));
+        catArray.add(new Cat("cat", "cat",0, 0));
 
         assertEquals(0, catArray.get(0).getAge(), "this is not it");
     }
@@ -23,16 +23,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     @Test
      void test_get_cat_eat()
     {
-        Cat testCat = new Cat("cat", 0, 0);
-        assertEquals("cat eats", testCat.eat(), "this is not it");
+        Cat testCat = new Cat("cat", "cat",0, 0);
+        assertEquals("null eats", testCat.eat(), "this is not it");
     }
 
     @Test
      void test_get_cat_kill()
     {
-        Cat testCat = new Cat("cat", 0, 0);
-        FlyingRat flyingRat = new FlyingRat("rat", 0, 100);
-        assertEquals("cat kills rat", testCat.kill(flyingRat), "this is not it");
+        Cat testCat = new Cat("cat", "cat",0, 0);
+        FlyingRat flyingRat = new FlyingRat("rat", "rat", 0, 100);
+        assertEquals("null kills null", testCat.kill(flyingRat), "this is not it");
     }
 
     @Test
@@ -40,7 +40,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     {
         ArrayList<Cat> catArray = new ArrayList<>();
 
-        catArray.add(new Cat("cat", 0, 0));
+        catArray.add(new Cat("cat", "cat",0, 0));
         catArray.get(0).setName("big cat");
         assertEquals("big cat", catArray.get(0).getName(), "this is not it");
     }
@@ -62,7 +62,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
      @Test
      void test_cat_get_health()
      {
-         Cat testCat = new Cat("cat", 0, 0);
+         Cat testCat = new Cat("cat", "cat",0, 0);
          testCat.setHealth(100);
          assertEquals(100, testCat.getHealth(), "this is not it");
      }
@@ -70,16 +70,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
      @Test
      void test_cat_die()
      {
-         Cat testCat = new Cat("cat", 0, 0);
+         Cat testCat = new Cat("cat", "cat",0, 0);
 
-         assertEquals("cat dies", testCat.die(), "this is not it");
+         assertEquals("null dies", testCat.die(), "this is not it");
      }
 
      @Test
      void test_cat_breathe()
      {
-         Cat testCat = new Cat("cat", 0, 0);
+         Cat testCat = new Cat("cat", "cat",0, 0);
 
-         assertEquals("cat breathes", testCat.breathe(), "this is not it");
+         assertEquals("null breathes", testCat.breathe(), "this is not it");
      }
 }

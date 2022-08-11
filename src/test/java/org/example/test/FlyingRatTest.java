@@ -13,9 +13,9 @@ class FlyingRatTest {
     @Test
     void test_flyingrat_eat()
     {
-        FlyingRat flyingRat = new FlyingRat("rat", 0, 100);
+        FlyingRat flyingRat = new FlyingRat("rat", "rat",0, 100);
 
-        assertEquals("rat eats", flyingRat.eat(), "this is not it");
+        assertEquals("null eats", flyingRat.eat(), "this is not it");
     }
 
      @Test
@@ -23,7 +23,7 @@ class FlyingRatTest {
      {
          ArrayList<FlyingRat> flyingRatArray = new ArrayList<>();
 
-         flyingRatArray.add(new FlyingRat("rat", 0, 100));
+         flyingRatArray.add(new FlyingRat("rat", "rat",0, 100));
          flyingRatArray.get(0).setName("big rat");
          assertEquals("big rat", flyingRatArray.get(0).getName(), "this is not it");
      }
@@ -33,7 +33,7 @@ class FlyingRatTest {
      {
          ArrayList<FlyingRat> flyingRatArray = new ArrayList<>();
 
-         flyingRatArray.add(new FlyingRat("rat", 0, 100));
+         flyingRatArray.add(new FlyingRat("rat", "rat",0, 100));
 
          assertEquals(0, flyingRatArray.get(0).getAge(), "this is not it");
      }
@@ -41,7 +41,7 @@ class FlyingRatTest {
      @Test
      void test_flyingrat_get_health()
      {
-         FlyingRat flyingRat = new FlyingRat("rat", 0, 100);
+         FlyingRat flyingRat = new FlyingRat("rat", "rat",0, 100);
          flyingRat.setHealth(100);
 
          assertEquals(100, flyingRat.getHealth(), "this is not it");
@@ -50,7 +50,7 @@ class FlyingRatTest {
      @Test
      void test_flyingrat_is_flying()
      {
-         FlyingRat flyingRat = new FlyingRat("rat", 0, 100);
+         FlyingRat flyingRat = new FlyingRat("rat", "rat",0, 100);
 
          assertFalse(flyingRat.isFlying(), "this is not it");
      }
@@ -58,33 +58,33 @@ class FlyingRatTest {
      @Test
      void test_flyingrat_takeoff()
      {
-         FlyingRat flyingRat = new FlyingRat("rat", 0, 100);
+         FlyingRat flyingRat = new FlyingRat("rat", "rat",0, 100);
 
-         assertEquals("rat takes off", flyingRat.takeOff(), "this is not it");
+         assertEquals("null takes off", flyingRat.takeOff(), "this is not it");
      }
 
      @Test
      void test_flyingrat_flight()
      {
-         FlyingRat flyingRat = new FlyingRat("rat", 0, 100);
+         FlyingRat flyingRat = new FlyingRat("rat", "rat",0, 100);
 
-         assertEquals("rat is flying", flyingRat.flight(), "this is not it");
+         assertEquals("null is flying", flyingRat.flight(), "this is not it");
      }
 
      @Test
      void test_flyingrat_landing()
      {
-         FlyingRat flyingRat = new FlyingRat("rat", 0, 100);
+         FlyingRat flyingRat = new FlyingRat("rat", "rat",0, 100);
 
-         assertEquals("rat has landed", flyingRat.landing(), "this is not it");
+         assertEquals("null has landed", flyingRat.landing(), "this is not it");
      }
 
     @Test
     void test_flyingrat_breathe()
     {
-        FlyingRat flyingRat = new FlyingRat("rat", 0, 100);
+        FlyingRat flyingRat = new FlyingRat("rat", "rat",0, 100);
 
-        assertEquals("rat breathes", flyingRat.breathe(), "this is not it");
+        assertEquals("null breathes", flyingRat.breathe(), "this is not it");
     }
 
 /*    @Test

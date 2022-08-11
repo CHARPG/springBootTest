@@ -2,12 +2,10 @@ package org.example;
 
 public class FlyingRat extends Bird implements Flying{
 
-    public FlyingRat(String name, int age, int health)
-    {
-        setName(name);
-        setAge(age);
-        setHealth(health);
+    public FlyingRat(String animal, String name, int age, int health) {
+        super(animal, name, age, health);
     }
+
     public String eat()
     {
         return(getName() + " eats");
