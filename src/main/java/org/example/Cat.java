@@ -13,7 +13,7 @@ public class Cat extends Mammal{
     }
     public String kill(Animal animal)
     {
-        System.out.println(animal.die());
+        animal.die();
         return(getName() + " kills " + animal.getName());
     }
 }

@@ -1,5 +1,10 @@
 package org.example;
 
+import com.softwareinstitute.training.vet.AnimalCollection;
+
+import static com.softwareinstitute.training.vet.AnimalCollection.catArray;
+import static com.softwareinstitute.training.vet.AnimalCollection.flyingRatArray;
+
 public class Animal extends Main {
     private String name;
     private int age;

@@ -8,15 +8,23 @@ import org.example.FlyingRat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnimalCollection {
-    private List<Animal> animalList= new ArrayList();
-
+public class AnimalCollection{
+    protected static List<Animal> animalList= new ArrayList();
+    public static ArrayList<Cat> catArray = new ArrayList<>();
+    public static final ArrayList<FlyingRat> flyingRatArray = new ArrayList<>();
+    private static String[] birdNames = {"Blungo", "Cungo", "Dungo"};
+    private static String[] catNames = {"Bingo", "Bongo", "Boingo"};
     public AnimalCollection(){
-        this.animalList.add(new Cat("Gareth", 3, 100));
-        this.animalList.add(new Cat("Alex", 7, 80));
-        this.animalList.add(new Cat("Billy", 2, 100));
-        this.animalList.add(new FlyingRat("Ash", 7, 92));
-        this.animalList.add(new FlyingRat("Tom", 4, 98));
+        animalList.add((new Cat("e", 0, 0)));
+        for (int i = 0; i < 3; i++) {
+            flyingRatArray.add(new FlyingRat(birdNames[i], 0, 100));
+            animalList.add(flyingRatArray.get(i));
+        }
+        for (int i = 0; i < 2; i++) {
+            catArray.add(new Cat(catNames[i], 0, 100));
+            animalList.add(catArray.get(i));
+        }
+        animalList.add(catArray.get(0).breed(catArray.get(0), catArray.get(1)));
     }
 
     public List<Animal> getAnimalCollection(){
