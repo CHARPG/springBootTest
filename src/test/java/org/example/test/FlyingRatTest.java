@@ -1,5 +1,6 @@
 package org.example.test;
 
+import org.example.Cat;
 import org.example.FlyingRat;
 import org.junit.jupiter.api.Test;
 
@@ -77,4 +78,23 @@ class FlyingRatTest {
 
          assertEquals("rat has landed", flyingRat.landing(), "this is not it");
      }
+
+    @Test
+    void test_flyingrat_breathe()
+    {
+        FlyingRat flyingRat = new FlyingRat("rat", 0, 100);
+
+        assertEquals("rat breathes", flyingRat.breathe(), "this is not it");
+    }
+
+    @Test
+    void test_flyingrat_breed()
+    {
+        FlyingRat testFlyingRat = new FlyingRat("rat", 0, 0);
+        FlyingRat testFlyingRat2 = new FlyingRat("rat", 0, 0);
+
+        if(testFlyingRat.getClass() == testFlyingRat2.getClass()) {
+            assertEquals("rat breeds with rat", testFlyingRat.breed(testFlyingRat, testFlyingRat2), "this is not it");
+        }
+    }
 }
