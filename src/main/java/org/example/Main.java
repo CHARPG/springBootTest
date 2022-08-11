@@ -16,29 +16,29 @@ public class Main {
         }
 
         //breeding
-        System.out.println("Amount of cats: " + catArray.size());
+        System.out.println("Amount of cats: " + catArray.size());// NOPMD
 
-        System.out.println(catArray.get(0).breed(catArray.get(0), catArray.get(1)));
+        System.out.println(catArray.get(0).breed(catArray.get(0), catArray.get(1)));// NOPMD
         catArray.get(2).setName(catNames[2]);
         catArray.get(2).setAge(0);
 
-        System.out.println(catArray.get(2).getName() + " now exists");
+        System.out.println(catArray.get(2).getName() + " now exists");// NOPMD
 
-        System.out.println("Amount of cats: " + catArray.size() + "\n");
+        System.out.println("Amount of cats: " + catArray.size() + "\n");// NOPMD
 
         //cat actions
-        System.out.println(catArray.get(0).eat() + "\n");
+        System.out.println(catArray.get(0).eat() + "\n");// NOPMD
 
         //bird actions
-        System.out.println(flyingRatArray.get(0).eat());
+        System.out.println(flyingRatArray.get(0).eat());// NOPMD
 
         //cat killing
         for(int i = 0; i < flyingRatArray.size(); i++)
         {
-            System.out.println(catArray.get(i).move(flyingRatArray.get(i).getName()));
+            System.out.println(catArray.get(i).move(flyingRatArray.get(i).getName()));// NOPMD
 
-            System.out.println(catArray.get(i).kill(flyingRatArray.get(i--)) + "\n");
+            System.out.println(catArray.get(i).kill(flyingRatArray.get(i--)) + "\n");// NOPMD
         }
-        System.out.println("Amount of flying rats " + flyingRatArray.size());
+        System.out.println("Amount of flying rats " + flyingRatArray.size());// NOPMD
     }
 }

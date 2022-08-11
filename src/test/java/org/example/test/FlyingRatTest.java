@@ -96,5 +96,8 @@ class FlyingRatTest {
         if(testFlyingRat.getClass() == testFlyingRat2.getClass()) {
             assertEquals("rat breeds with rat", testFlyingRat.breed(testFlyingRat, testFlyingRat2), "this is not it");
         }
+        if(testFlyingRat.getClass() == testFlyingRat2.getClass()) {
+            assertEquals("rat breeds with rat", testFlyingRat2.breed(testFlyingRat2, testFlyingRat), "this is not it");
+        }
     }
 }

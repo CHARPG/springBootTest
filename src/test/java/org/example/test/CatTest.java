@@ -54,6 +54,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
          if(testCat.getClass() == testCat2.getClass()) {
              assertEquals("cat breeds with cat", testCat.breed(testCat, testCat2), "this is not it");
          }
+         if(testCat.getClass() == testCat2.getClass()) {
+             assertEquals("cat breeds with cat", testCat2.breed(testCat2, testCat), "this is not it");
+         }
      }
 
      @Test

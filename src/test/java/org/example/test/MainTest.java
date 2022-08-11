@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MainTest {
+ class MainTest {
 
     @Test
     void test_array_add()
