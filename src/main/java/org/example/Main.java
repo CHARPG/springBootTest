@@ -1,6 +1,8 @@
 package org.example;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 public class Main {
+    private static Logger LOGGER = Logger.getLogger("InfoLogging");
     protected static final ArrayList<Cat> catArray = new ArrayList<>();
     protected static final ArrayList<FlyingRat> flyingRatArray = new ArrayList<>();
     private static String[] birdNames = {"Blungo", "Cungo", "Dungo"};
@@ -16,29 +18,29 @@ public class Main {
         }
 
         //breeding
-        System.out.println("Amount of cats: " + catArray.size());// NOPMD
+        LOGGER.info("Amount of cats: " + catArray.size());
 
-        System.out.println(catArray.get(0).breed(catArray.get(0), catArray.get(1)));// NOPMD
+        LOGGER.info(catArray.get(0).breed(catArray.get(0), catArray.get(1)));
         catArray.get(2).setName(catNames[2]);
         catArray.get(2).setAge(0);
 
-        System.out.println(catArray.get(2).getName() + " now exists");// NOPMD
+        LOGGER.info(catArray.get(2).getName() + " now exists");
 
-        System.out.println("Amount of cats: " + catArray.size() + "\n");// NOPMD
+        LOGGER.info("Amount of cats: " + catArray.size() + "\n");
 
         //cat actions
-        System.out.println(catArray.get(0).eat() + "\n");// NOPMD
+        LOGGER.info(catArray.get(0).eat() + "\n");
 
         //bird actions
-        System.out.println(flyingRatArray.get(0).eat());// NOPMD
+        LOGGER.info(flyingRatArray.get(0).eat());
 
         //cat killing
         for(int i = 0; i < flyingRatArray.size(); i++)
         {
-            System.out.println(catArray.get(i).move(flyingRatArray.get(i).getName()));// NOPMD
+            LOGGER.info(catArray.get(i).move(flyingRatArray.get(i).getName()));
 
-            System.out.println(catArray.get(i).kill(flyingRatArray.get(i--)) + "\n");// NOPMD
+            LOGGER.info(catArray.get(i).kill(flyingRatArray.get(i--)) + "\n");
         }
-        System.out.println("Amount of flying rats " + flyingRatArray.size());// NOPMD
+        LOGGER.info("Amount of flying rats " + flyingRatArray.size());
     }
 }
