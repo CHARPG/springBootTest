@@ -10,8 +10,13 @@ public class Mammal extends Animal{
         return(this.getName() + " breathes");
     }
 
-    public Animal breed(Animal animal1, Animal animal2)
+    public Animal breed(Animal animal1)
     {
-        return (new Cat("cat", "cat", 0, 0));
+        if(this.getClass() == animal1.getClass()) {
+            return (new Cat("cat", "cat", 0, 0));
+        }
+        else {
+            return null;
+        }
     }
 }

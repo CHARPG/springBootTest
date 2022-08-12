@@ -19,8 +19,14 @@ public class Bird extends Animal{
         return(this.getName() + " breathes");
     }
 
-    public Animal breed(Animal animal1, Animal animal2)
+    public Animal breed(Animal animal1)
     {
-        return (new FlyingRat("rat", "rat",0, 0));
+        if(this.getClass() == animal1.getClass()) {
+            return (new FlyingRat("rat", "rat", 0, 0));
+        }
+        else
+        {
+            return null;
+        }
     }
 }

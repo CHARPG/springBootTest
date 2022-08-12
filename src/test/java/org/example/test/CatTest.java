@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
      void test_get_cat_eat()
     {
         Cat testCat = new Cat("cat", "cat",0, 0);
-        assertEquals("null eats", testCat.eat(), "this is not it");
+        assertEquals("cat eats", testCat.eat(), "this is not it");
     }
 
     @Test
@@ -32,7 +32,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     {
         Cat testCat = new Cat("cat", "cat",0, 0);
         FlyingRat flyingRat = new FlyingRat("rat", "rat", 0, 100);
-        assertEquals("null kills null", testCat.kill(flyingRat), "this is not it");
+        assertEquals("cat kills rat", testCat.kill(flyingRat), "this is not it");
     }
 
     @Test
@@ -48,15 +48,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /*     @Test
      void test_cat_breed()
      {
-         Cat testCat = new Cat("cat", 0, 0);
-         Cat testCat2 = new Cat("cat", 0, 0);
+         Cat testCat = new Cat("cat", "cat",0, 0);
+         Cat testCat2 = new Cat("cat", "cat",0, 0);
 
-         if(testCat.getClass() == testCat2.getClass()) {
-             assertEquals("cat breeds with cat", testCat.breed(testCat, testCat2), "this is not it");
-         }
-         if(testCat.getClass() == testCat2.getClass()) {
-             assertEquals("cat breeds with cat", testCat2.breed(testCat2, testCat), "this is not it");
-         }
+
+         assertEquals("cat breeds with cat", testCat.breed(testCat2), "this is not it");
+         assertEquals("null", testCat2.breed(testCat), "this is not it");
      }*/
 
      @Test
@@ -72,7 +69,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
      {
          Cat testCat = new Cat("cat", "cat",0, 0);
 
-         assertEquals("null dies", testCat.die(), "this is not it");
+         assertEquals("cat dies", testCat.die(), "this is not it");
      }
 
      @Test
@@ -80,6 +77,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
      {
          Cat testCat = new Cat("cat", "cat",0, 0);
 
-         assertEquals("null breathes", testCat.breathe(), "this is not it");
+         assertEquals("cat breathes", testCat.breathe(), "this is not it");
      }
 }

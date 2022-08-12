@@ -24,7 +24,7 @@ public class AnimalCollection{
             catArray.add(new Cat("cat", catNames[i], 0, 100));
             animalList.add(catArray.get(i));
         }
-        animalList.add(catArray.get(0).breed(catArray.get(0), catArray.get(1)));
+        animalList.add(catArray.get(0).breed(catArray.get(1)));
     }
 
     public List<Animal> getAnimalCollection(){
